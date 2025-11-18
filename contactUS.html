@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     
+    <title>Contact Us - Petal Whisper</title>
+    <meta name="description" content="Contact Petal Whisper for general messages, assistance, or flower enquiries. Find our opening hours and location on the map.">
+
+    </head>
+    <body>
+        <header>
+            <a href="homepage.html"><img src="images/Images (1)/IMG_0119 (2).jpeg" alt="Petal Whisper logo" width='200' height="150"></a>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Homepage</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <main>
+            <h1>Contact Petal Whisper</h1>
+            
+            <h2>Need Assistance?</h2>
+            <p>
+              Call us on *+27 67 888 1894*
+              OR Whatsapp us on *+27 75 001 7665*
+            </p>
+            <hr>
+            
+            <h2>Email Address</h2>
+            <p>
+               <a href="mailto:shuduuuuu0@gmail.com">shuduuuuu0@gmail.com</a>
+            </p>
+            <hr>
+            
+            <h2>Opening Hours</h2>
+            <p>
+                *Monday-Friday:* 08:00am-06:00pm
+            </p>
+            <p>
+                *Saturday:* 10:00am-04:00pm
+            </p>
+            <p>
+                *Sunday:* Closed
+            </p>
+            <hr>
+            
+            <h2>Social Media</h2>
+            <p>
+                Instagram: *petal_whisperr*
+            </p>
+            <p>
+                Facebook: *petal_whisperr0*
+            </p>
+            <hr>
+
+            <h2>Our Location </h2>
+            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<div id="map" style="height: 300px;"></div>
+
+<script>
+  const map = L.map('map').setView([-26.2041, 28.0473], 10); // Example: Johannesburg
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19
+  }).addTo(map);
+
+  L.marker([-29.8579, 31.0292]).addTo(map)
+    .bindPopup("📍 Petal Whisper – Durban")
+    .openPopup();
+</script>
+            
+            
+        </main>
+        
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+         integrity="sha256-20n6a9k68J3wEa/8eW4T5H04G9xX3w4s9T9/lF1G5G8="
+         crossorigin=""></script>
+         
+        <script src="script.js"></script>
+    </body>
+</html>
+

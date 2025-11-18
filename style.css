@@ -1,0 +1,226 @@
+h1, h2, h3 { 
+    color: #8d4f3a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body, p {
+    color: #8d4f3a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: #8d4f3a; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 15px;
+    display: block; 
+}
+a:hover {
+    background-color: #8d4f3a;
+    color: #eaded4;
+}
+
+
+button{
+    background-color: #eaded4;
+    color: #8d4f3a;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline;
+    border: 2px solid #8d4f3a; /* Added for better visibility */
+}
+
+button:hover, button:focus { /* Added :focus for accessibility */
+    background-color: #8d4f3a;
+    border-color: #8d4f3a;
+    color: #eaded4;
+    outline: none; /* Remove default focus outline if necessary, but ensure hover/focus style is clear */
+}
+
+button{
+    cursor: pointer;
+}
+
+
+header, nav {
+    background-color: #eaded4;
+    width: 100%;
+    
+}
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    list-style: none; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+nav {
+    flex-grow: 1; 
+}
+
+/* Updated header to use Flexbox on desktop for better alignment */
+header {
+    display: flex;
+    align-items: center; /* Vertically align logo and nav */
+    padding: 10px 0; /* Add some padding for visual separation */
+}
+
+
+body {
+    background-image: url(images/20250926_134634354_iOS.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 100vh; 
+}
+
+
+.menu-toggle {
+    display: none; 
+}
+
+/* Screen Reader Only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Cart Badge Styling */
+.cart-badge {
+    background-color: #8d4f3a;
+    color: #eaded4;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.cart-link {
+    margin-left: auto; /* Push the cart link to the far right of the header */
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+}
+
+/* Toast Notification Styling - Minimal */
+.pw-toast {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+}
+
+
+@media (max-width: 750px) {
+    
+    header {
+        /* On small screens, stack the logo and menu toggle/nav */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: block; 
+        background-color: #8d4f3a;
+        color: #eaded4;
+        border: none;
+        padding: 10px 15px;
+        width: 100%;
+        text-align: left;
+        border-radius: 0;
+        cursor: pointer;
+    }
+    
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        background-color: #eaded4; 
+    }
+    
+    
+    .nav-closed {
+        display: none;
+    }
+
+    
+    nav ul a {
+        padding: 12px 15px;
+        border-bottom: 1px solid #c9b4a9;
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased min size for better display */
+    gap: 16px;
+    padding: 20px; /* Added padding to the grid */
+}
+
+.product-card {
+    border: 1px solid #c9b4a9;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f7f3f0; /* Light background for the card */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+    width: 100%;        
+    height: 200px;      
+    object-fit: cover;  
+    display: block;
+}
+
+.product-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-title {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #38761d; /* A different, pleasing color for the price */
+    margin-bottom: 15px;
+}
+
+
+.product-card img.nocrop {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+header > a img,
+header img {
+    max-width: 200px;  
+    height: auto;
+}
